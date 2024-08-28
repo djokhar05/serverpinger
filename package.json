@@ -1,0 +1,16 @@
+{
+  "name": "server_pinger",
+  "version": "1.0.0",
+  "description": "A node mini server which helps keeps servers alive and not spin down.",
+  "main": "index.js",
+  "repository": "https://github.com/djokhar05/server_pinger.git",
+  "author": "djokhar05 <dedon4@live.com>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.7.5",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "node-cron": "^3.0.3"
+  }
+}
