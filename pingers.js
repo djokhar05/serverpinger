@@ -23,6 +23,8 @@ const pingServers = async () => {
   }
 };
 
+pingServers();
+
 console.log("Cron Pingers Being Setup");
 module.exports = () => {
   cron.schedule("*/10 * * * *", async () => {
