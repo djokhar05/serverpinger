@@ -23,10 +23,12 @@ const pingServers = async () => {
   }
 };
 
-console.log("Cron Pingers Being Setup");
-module.exports = () => {
-  cron.schedule("*/5 * * * *", async () => {
-    console.log("Pinging Servers ...");
-    await pingServers();
-  });
-};
+await pingServers();
+
+// console.log("Cron Pingers Being Setup");
+// module.exports = () => {
+//   cron.schedule("*/5 * * * *", async () => {
+//     console.log("Pinging Servers ...");
+//     await pingServers();
+//   });
+// };
