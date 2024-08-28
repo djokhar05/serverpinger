@@ -13,6 +13,10 @@ app.use(
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.send("Welcome to Server Pinger Server 🎉🥳");
+});
+
 const port = process.env.PORT || 5500;
 const server = app.listen(port, () => {
   let serverAddress = server.address().address;
