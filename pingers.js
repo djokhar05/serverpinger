@@ -22,8 +22,7 @@ const pingServers = async () => {
     console.log("An error occured while pinging the server" + server);
   }
 };
-
-await pingServers();
+pingServers();
 
 // console.log("Cron Pingers Being Setup");
 // module.exports = () => {
