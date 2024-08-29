@@ -16,7 +16,7 @@ const pingServers = async () => {
         console.log(`${index + 1}. ${response.data}`);
       })
     );
-    console.log("Pinging Servers Completed");
+    console.log("Pinging alls Servers Completed");
   } catch (error) {
     // console.log(error);
     console.log("An error occured while pinging the server" + server);
