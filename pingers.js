@@ -6,11 +6,13 @@ const servers_to_ping = [
   "https://roundtripzserver.onrender.com",
   "https://roundtripz-socket.onrender.com",
 ];
+let currentServer = "";
 
 const pingServers = async () => {
   try {
     await Promise.all(
       servers_to_ping.map(async (server, index) => {
+        currentServer = server;
         console.log(`Pinging ${server} ...`);
         const response = await axios.get(server);
         console.log(`${index + 1}. ${response.data}`);
@@ -19,7 +21,7 @@ const pingServers = async () => {
     console.log("Pinging alls Servers Completed");
   } catch (error) {
     // console.log(error);
-    console.log("An error occured while pinging the server" + server);
+    console.log("An error occured while pinging the server" + currentServer);
   }
 };
 pingServers();
